@@ -1,0 +1,350 @@
+/* Web font*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500&display=swap');
+
+/* Global reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fix up for older browsers to draw the new semantic elements*/
+header,
+nav,
+main,
+aside,
+article,
+section,
+footer,
+figure,
+figcaption {
+    display: block;
+}
+
+/* Basic text styling */
+
+html {
+    font-size: 10px;
+    font-family: "Inter", Helvetica, Arial, sans-serif;
+    background-color: f4f1e6;
+}
+
+/* Small screens not supported */
+#screen-std {
+    display: none;
+}
+
+h1 {
+    font-family: "Dm Serif Display", Georgia, 'Times New Roman', Times, serif;
+    font-size: 7rem;
+}
+
+h2 {
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+p, figcaption {
+    font-size: 2.4rem;
+    line-height: 1.5;
+    padding: 0.8rem 0;    
+}
+
+
+/* Setting up a flexible grid, adapted from MDN layout cookbook */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Grid_wrapper */
+/* This is a 12 column grid with 10 FIXED central columns & 2 RESPONSIVE outer columns */
+.grid {
+    display: grid;
+    grid-template-columns: minmax(20px, 1fr) repeat(10, minmax(0, 120px)) minmax(20px, 1fr);
+    grid-gap: 10px;
+}
+
+/* HEADER STYLING */
+.stack {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+h1, h2, .stack p {
+    width: 50vw;
+    margin: 0 auto;
+}
+
+.frame {
+    height: 100vh;
+}
+
+.title {
+    grid-column: 2 / -2;
+}
+
+/* MAIN STYLING */
+.scene {
+    min-height: 140vh;
+    position: relative;
+}
+
+.sticky-item {
+    position: sticky;
+    top: 4rem;
+}
+
+.bib {
+    padding: 6rem 0;
+}
+
+.text, .f-title, .f-text {
+    grid-column: 4 / -4;
+}
+
+.f-text p {
+    text-wrap: balance;
+    font-size: 1.5rem;
+}
+
+.grid h2 {
+    margin: 0;
+}
+
+.full-width {
+    grid-column: 1/-1;
+}
+
+.hover-item {
+    margin-top: 4rem;
+    outline: 0.25rem dashed gray;
+}
+
+/* Flexbox for hover images */
+.image {
+    grid-column: 3 / -3;
+    padding: 5rem 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Grid for staggered overlapping images */
+.slide {
+    grid-column: 3/-3;
+    padding: 6rem 0;
+    display: grid;
+    grid-template-columns: repeat(7,7fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+}
+
+/* Fluid images*/
+img {
+    max-width: 100%;
+    height: auto;
+    min-width: 0;
+}
+
+/* Pointer hand for hover scenes */
+.point {
+    cursor: pointer;
+}
+
+/* ---------------------------------------- */
+/* --------- p1: EYES --------------------- */
+/* --------- Cursor hover ----------------- */
+
+#eye-ball-L, #eye-ball-R {
+    position: relative;
+    padding-right: 2rem;
+}
+
+#eye-L-close, #eye-R-close {
+    position: absolute;
+    padding-right: 2rem;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+#eye-L-close:hover, #eye-R-close:hover {
+    opacity: 1;
+}
+
+/* ---------------------------------------- */
+/* --------- p2: WHEATSTONE --------------- */
+/* ----- 2D to 3D scroll animation -------- */
+
+#back, #mid, #front {
+    grid-column: 3/6;
+    grid-row: 1/2;
+}
+
+/* ---------------------------------------- */
+/* --------- p3: MIRROR ------------------- */
+/* ----- Mirror scroll animation ---------- */
+
+#L-panel, #base, #R-panel {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+}
+
+/* ---------------------------------------- */
+/* --------- p4: DAGUERRE ----------------- */
+/* -- Daguerrotype opacity animation ------ */
+
+#d-start, #d-end {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+}
+
+/* ---------------------------------------- */
+/* --------- p5: BREWSTER ----------------- */
+/* -- Alternating image scroll animation -- */
+
+#br-closed, #br-open {
+    grid-column: 3/-3;
+    grid-row: 1/2;
+}
+
+/* ---------------------------------------- */
+/* --------- p6: LENTICULAR --------------- */
+/* -- 2 images combining scroll animation - */
+
+#L-pic, #R-pic {
+    grid-column: 3/-3;
+    grid-row: 1/2;
+}
+
+/* ---------------------------------------- */
+/* --------- p7: HOLMES ------------------- */
+/* -- Holmes stereoscope scroll animation - */
+
+#h-handle, #h-slider {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+}
+
+/* ---------------------------------------- */
+/* --------- p8: VIEW-MASTER -------------- */
+/* -- View master scroll animation -------- */
+
+#vm-front, #vm-side {
+    grid-column: 2/-2;
+    grid-row: 1/2;
+}
+
+/* ---------------------------------------- */
+/* --------- p9: SPACEMAKING -------------- */
+/* ----- 2D to DEPTH scroll animation ----- */
+
+#depth-back, #depth-mid, #depth-front {
+    grid-column: 3/6;
+    grid-row: 1/2;
+}
+
+/* ---------------------------------------- */
+/* --------- p10: EARLY ------------------- */
+/* ----- Cursor hover change -------------- */
+
+.no-touch {
+    grid-column: 3/-3;
+    cursor: not-allowed;
+}
+
+/* ---------------------------------------- */
+/* --------- p11: ANAGLYPH ---------------- */
+/* ----- Anaglyph scroll animation -------- */
+
+#sq-blue, #sq-red {
+    grid-column: 3/6;
+    grid-row: 1/2;
+    mix-blend-mode: multiply;   
+}
+
+/* ---------------------------------------- */
+/* --------- p12: VIRTUAL REALITY --------- */
+/* ----- VR scroll animation -------------- */
+
+#vr-headset, #vr-left, #vr-right {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+}
+
+/* ---------------------------------------- */
+/* --------- p13: CONCLUSION -------------- */
+/* ---- Interactive image carousel -------- */
+
+.carousel {
+    width: 100vw;
+    height: auto;
+    position: relative;
+}
+
+.carousel > ul {
+    margin: 0;
+    padding: 3rem;
+    list-style: none;
+}
+
+.gallery-image {
+    grid-column: 3/-3;
+    grid-row: 1/2;
+    padding: 5rem 5rem  0;
+    opacity: 0;
+    outline: 0.25rem dashed black;
+}
+
+.gallery-image[data-active] {
+    opacity: 1;
+}
+
+figcaption {
+    font-style: italic;
+    text-align: center;
+    padding: 5rem;
+}
+
+.carousel-button {
+    position: absolute;
+    background: none;
+    border: none;
+    font-size: 10rem;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-50%);
+    border-radius: 0.25rem;
+    padding: 0 0.5rem;
+}
+
+.carousel-button.next {
+    right: 3rem
+}
+
+.carousel-button.next:hover {
+    color: red;
+}
+
+.carousel-button.prev {
+    left: 3rem
+}
+
+.carousel-button.prev:hover {
+    color: blue;
+}
+
+.carousel-button:focus {
+    outline: 1px solid black;
+    color: gray;
+}
+
+/* ------------------------------------------------------- */
+/* ---------- MEDIA QUERY: SMALL & MID SCREENS  ---------- */
+
+@media only screen and (min-width: 1020px) {
+    #screen-sml {
+        display: none;
+    }
+    #screen-std {
+        display: block;
+    }
+}

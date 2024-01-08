@@ -1,0 +1,308 @@
+<!DOCTYPE html5>
+<html lang="en">
+
+<head>
+    
+    <!-- Web rendering protocols -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- SEO - Website title & description -->
+    <title>Stereoscopes</title>
+    <meta name="description" content="A visual introduction into stereoscopes, the beginning of simulated realities.">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Loading JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
+    <script src="main.js"></script>
+
+</head>
+
+<body>
+    
+    <!-- Small & medium screens not supported -->
+    <div id="screen-sml">
+        <div class="stack frame">
+            <p>Please view on a larger screen.</p>
+        </div>
+    </div>
+    
+    <!-- Standard desktop viewing -->
+    <div id="screen-std">
+
+        <!-- Title -->
+        <header class="stack frame">
+            <h1 class="title">Stereoscopes</h1>
+            <h2 class="title">The beginning of simulated realities.</h2>
+            <h2 class="title">&#8595;</h2>
+        </header>
+    
+        <!-- Start of content -->
+        <main>
+
+            <!-- p1: EYES -->
+            <div class="scene">
+                <div class="grid sticky-item point">
+                    <div class="text">
+                        <p>For most people, when we view the world we see with two eyes. But what happens when we only look through one, or the other? </p>    
+                    </div>
+                    <!-- Cursor hover: Eyes -->
+                    <div class="image hover-item">
+                        <!-- Left eye -->
+                        <figure id="eye-ball-L">
+                            <img src="images/eye-open.svg" alt="open left eye">
+                            <img src="images/eye-closed.svg" alt="closed left eye" id="eye-L-close">
+                        </figure>
+                        <!-- Right eye -->
+                        <figure id="eye-ball-R">
+                            <img src="images/eye-open.svg" alt="open right eye">
+                            <img src="images/eye-closed.svg" alt="closed right eye" id="eye-R-close">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- p2: WHEATSTONE -->
+            <div class="scene">
+                <div class="grid sticky-item">
+                    <div class="text">
+                        <p>In the 19th century Sir Charles Wheatstone was asking the same questions and wanted to investigate how people could see with depth by translating 2D imagery to 3D perception<sup>[1]</sup>.
+                        </p>
+                    </div>
+                    <!-- Scroll animation: 2D to 3D -->
+                    <div class="slide">
+                        <img src="images/ground-1.svg" alt="Background" id="back">
+                        <img src="images/ground-2.svg" alt="middle ground" id="mid">
+                        <img src="images/ground-3.svg" alt="foreground" id="front">
+                    </div>
+                </div>
+            </div>
+    
+            
+            <!-- p3: MIRROR -->
+            <div class="scene">
+                <div class="grid sticky-item">
+                    <div class="text">
+                        <p> In 1838, he created the design of the first stereoscope, which utilised a mirror system to present objects as planes of surfaces split into two images. 
+                        </p>
+                    </div>
+                    <!-- Mirror scroll animation -->
+                    <div class="slide">
+                        <img src="images/ws-left.svg" alt="left panel of wheatstone stereoscope" id="L-panel">
+                        <img src="images/ws-base.svg" alt="base of wheatstone stereoscope" id="base">
+                        <img src="images/ws-right.svg" alt="right panel of wheatstone stereoscope" id="R-panel">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- p4: DAGUERRE -->
+            <div class="scene">
+                <div class="grid sticky-item">
+                    <div class="text">
+                        <p>The emergence of photography was paramount to the success of stereoscopes as photographs provided consistent accuracy in angle differences that illustrations could not achieve.
+                        </p>
+                    </div>
+                    <!-- Dageurrotype opacity animation -->
+                    <div class="slide">
+                        <img src="images/d-base.svg" alt="Daguerreotype with undeveloped photo" id="d-start">
+                        <img src="images/d-overlay.svg" alt="Daguerreotype with developed photo" id="d-end">
+                    </div>
+                </div>
+            </div>
+    
+            <!-- p5: BREWSTER -->
+            <div class="scene">
+                <div class="grid sticky-item">
+                    <div class="text">
+                        <p>Sir David Brewster improved upon this original design, with the aid of photographic imagery, and transformed the practice by using prisms rather than mirrors, and is considered the first to invent the lenticular stereoscope in 1849.</p>
+                    </div>
+                    <!-- Alternating image of brewster type -->
+                    <div class="slide">
+                        <img src="images/br-closed.svg" alt="brewster type stereoscope closed" id="br-closed">
+                        <img src="images/br-open.svg" alt="brewster type stereoscope open" id="br-open">
+                    </div>
+                </div>                
+            </div>
+
+            <!-- p6: LENTICULAR-->
+            <div class="scene">
+                <div class="grid sticky-item">
+                    <div class="text">
+                        <p>Lenticular stereoscopes used convex lenses as squinting magnifiers to allow stereographs (also known as double-eyed or twin pictures) to seamlessly slide into each other, like in natural vision to be perceived as one image.</p>
+                    </div>
+                    <!-- Scroll animation: 2 images into 1 -->
+                    <figure class="slide">
+                        <img src="images/square.svg" alt="left image" id="L-pic">
+                        <img src="images/square.svg" alt="right image" id="R-pic">
+                    </figure>
+                </div>                
+            </div>
+            
+            <!-- p7: HOLMES -->
+            <div class="scene">
+                <div class="grid sticky-item">
+                    <div class="text">
+                        <p>This lenticular design was updated again in 1861 by Oliver Wendell Holmes, who improved upon the box-form frame of the Brewster type by making it more portable and economical.</p>
+                    </div> 
+                    <!-- Handle scroll animation -->
+                    <div class="slide">
+                        <img src="images/h-base.svg" alt="holmes type stereoscope base" id="h-handle">
+                        <img src="images/h-slider.svg" alt="holmes type stereoscope slider" id="h-slider">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- p8: VIEW-MASTER -->
+            <div class="scene">
+                <div class="grid sticky-item">
+                    <div class="text">
+                        <p>Commercial mass produced products such as the pocket stereoscope or View-Master provided audiences with the opportunity to experience landscapes and sceneries in ways that were only thought possible by physically being there.</p>
+                    </div> 
+                    <!-- Alternating image of View-master -->
+                    <div class="slide">
+                        <img src="images/vm-front.svg" alt="front view of view master" id="vm-front">
+                        <img src="images/vm-side.svg" alt="side view of view master" id="vm-side">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- p9: SPACEMAKING -->
+            <div class="scene">
+                <div class="grid sticky-item">
+                    <div class="text">
+                        <p>As a practice of visual communication, stereoscopes are a spacemaking application of photography and can be considered the first form of visually simulated realities. </p>
+                    </div>
+                    <!-- Scroll animation: 2D to DEPTH -->
+                    <div class="slide">
+                        <img src="images/ground-1.svg" alt="Background" id="depth-back">
+                        <img src="images/ground-2.svg" alt="middle ground" id="depth-mid">
+                        <img src="images/ground-3.svg" alt="foreground" id="depth-front">
+                    </div>
+                </div>
+            </div>
+
+            <!-- p10: EARLY -->
+            <div class="scene">
+                <div class="grid sticky-item point">
+                    <div class="text">
+                        <p>Early applications of the stereoscope aimed to present the natural world for what it truly was, but not actually interact with it. </p>
+                    </div>
+                    <!-- Cursor hover changes to 'do not touch' -->
+                    <div class="slide hover-item">
+                            <img src="images/square.svg" alt="illustration of tree, mountains, pond and bushes" class="no-touch">        
+                    </div>
+                </div>
+            </div>
+        
+            <!-- p11: ANAGLYPH -->
+            <div class="scene">
+                <div class="grid sticky-item">
+                    <div class="text">
+                        <p>Derivatives of the stereoscope can be seen in the era of 3D cinema, utilising anaglyph systems or polarisation to separate left and right images.</p>
+                    </div>
+                    <!-- Scroll animation of anaglyph images -->
+                    <div class="slide">
+                        <img src="images/sq-blue.svg" alt="blue illustration" id="sq-blue">
+                        <img src="images/sq-red.svg" alt="red illustration" id="sq-red">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- p12: VIRTUAL REALITY -->
+            <div class="scene">
+                <div class="grid sticky-item point">
+                    <div class="text">
+                        <p>Contemporary practices of stereoscopic technologies incorporate interactive elements to simulate real and speculative worlds through augmented and virtual realities.</p>
+                    </div>
+                    <!-- Scroll animation of VR gear -->
+                    <div class="slide">
+                        <img src="images/vr-1.svg" alt="Virtual reality headset" id="vr-headset">
+                        <img src="images/vr-2.svg" alt="Virtual reality left controller" id="vr-left">
+                        <img src="images/vr-3.svg" alt="Virtual reality right controller" id="vr-right">
+                    </div>
+                </div>
+            </div>
+
+            <!-- p13: CONCLUSION -->
+            <div class="scene">
+                <div class="grid sticky-item point">
+                    <div class="text">
+                        <p>With an analog and limited beginning, the impact of stereoscope technologies has reshaped the way we experience the real world.</p>
+                    </div>
+                    <!-- INTERACTIVE CAROUSEL -->
+                    <section class="full-width" aria-label="Collection of stereoscopes throughout history">
+                        <div class="carousel" data-carousel>
+                            <button class="carousel-button prev" data-carousel-button="prev">&#8592;</button>
+                            <button class="carousel-button next" data-carousel-button="next">&#8594;</button>
+                            <ul class="grid" data-slides>
+                                <li class="gallery-image" data-active>
+                                    <figure>
+                                        <img src="images/final-wheatstone.svg" alt="wheatstone mirror stereoscope">
+                                        <figcaption>
+                                            Wheatstone stereoscope
+                                        </figcaption>
+                                    </figure>
+                                </li>
+                                <li class="gallery-image">
+                                    <figure>
+                                        <img src="images/final-brewster.svg" alt="brewster type stereoscope">
+                                        <figcaption>
+                                            Brewster type stereoscope
+                                        </figcaption>
+                                    </figure>
+                                </li>
+                                <li class="gallery-image">
+                                    <figure>
+                                        <img src="images/final-holmes.svg" alt="holmes type stereoscope">
+                                        <figcaption>
+                                            Holmes type stereoscope
+                                        </figcaption>
+                                    </figure>
+                                </li>
+                                <li class="gallery-image">
+                                    <figure>
+                                        <img src="images/final-view-master.svg" alt="view master stereoscope">
+                                        <figcaption>
+                                            View-master stereoscope
+                                        </figcaption>
+                                    </figure>
+                                </li>
+                                <li class="gallery-image">
+                                    <figure>
+                                        <img src="images/final-vr.svg" alt="Virtual reality headset">
+                                        <figcaption>
+                                            Virtual reality headset
+                                        </figcaption>
+                                    </figure>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- FOOTNOTES -->
+            <div class="grid bib">
+                <h2 class="f-title">Footnotes</h2>
+
+                <div class="f-text">
+                    <p><sup>1</sup> Wade, N. (2002) <i>Guest editorial.</i> Perception, vol. 31, p 265-272.</p>
+                    <p>Wikimedia. (.n.d.). [Charles Wheatstone stereoscope - woodcut 1840s] [Illustration]. https://commons.wikimedia.org/wiki/File:Charles_Wheatstone-mirror_stereoscope_XIXc.jpg. In the Public Domain</p>
+                    <p>Boston Almanac. (1871). [Holmes stereoscope with improvements from Joseph L. Bates] [Illustration]. Wikimedia. https://commons.wikimedia.org/wiki/File:1871_Bates_stereoscope_BostonAlmanac.png. In the Public Domain.</p>
+                    <p>Liudmila & Nelson. (5 August 2010). [Susse Frére Daguerreotype camera 1839] [Photograph]. Wikimedia. https://commons.wikimedia.org/wiki/File:Susse_Fr%C3%A9re_Daguerreotype_camera_1839.jpg. In the Public Domain.</p>
+                    <p>Gampe. (29 May 2019). [Brewster type stereoscope] [Photograph]. Wikimedia. https://commons.wikimedia.org/wiki/File:Stereoscope_(9430).jpg. CC BY-SA 4.0</p>
+                    <p>Kobbaka. (6 June 2016). [View-Master model L] [Photograph]. Wikimedia. https://commons.wikimedia.org/wiki/File:View-Master_model_L.jpg. CC BY-SA 4.0</p>
+                </div>
+            </div>
+
+        </main>
+    
+    </div>
+
+</body>
+
+</html>

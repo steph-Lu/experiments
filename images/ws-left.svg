@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_10" data-name="Layer 10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1370.22 609.19">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+
+      .cls-1, .cls-3, .cls-4 {
+        stroke: #000;
+      }
+
+      .cls-2 {
+        stroke-linecap: round;
+      }
+
+      .cls-2, .cls-5 {
+        fill: none;
+        stroke: #fff;
+      }
+
+      .cls-3 {
+        fill: #f4f1e6;
+      }
+
+      .cls-4 {
+        fill: blue;
+      }
+    </style>
+  </defs>
+  <rect class="cls-3" x="202.34" y="5.3" width="9.72" height="400.46"/>
+  <g>
+    <rect class="cls-1" x="40.36" y="493.35" width="42" height="42"/>
+    <rect class="cls-3" x="193.2" y="379.78" width="30" height="30"/>
+    <polygon class="cls-1" points="82.36 535.35 223.2 409.78 223.2 379.78 82.36 493.35 82.36 535.35"/>
+    <polygon class="cls-3" points="40.36 493.35 193.2 379.78 223.2 379.78 82.36 493.35 40.36 493.35"/>
+  </g>
+  <g>
+    <rect class="cls-1" x="112.36" y="22.56" width="7.55" height="69.3"/>
+    <rect class="cls-3" x="137.68" y="1.16" width="7.55" height="65.3"/>
+    <polygon class="cls-3" points="119.91 22.56 145.23 1.16 145.23 66.47 119.91 91.86 119.91 22.56"/>
+    <polygon class="cls-3" points="112.36 22.56 137.68 1.16 145.23 1.16 119.91 22.56 112.36 22.56"/>
+  </g>
+  <rect class="cls-1" x="56.5" y="103.89" width="9.72" height="410.46"/>
+  <polygon class="cls-3" points="212.06 379.78 66.22 493.35 66.22 103.89 212.06 5.3 212.06 379.78"/>
+  <polygon class="cls-4" points="193.22 348.94 85.06 433.17 85.06 144.32 193.22 71.2 193.22 348.94"/>
+  <polygon class="cls-3" points="212.06 5.3 66.22 103.89 56.5 103.89 202.34 5.3 212.06 5.3"/>
+  <line class="cls-3" x1="85.06" y1="433.17" x2="193.22" y2="71.2"/>
+  <line class="cls-3" x1="193.22" y1="348.94" x2="85.06" y2="144.32"/>
+  <polyline class="cls-5" points="56.5 493.35 56.5 514.35 66.22 514.35 66.22 493.35"/>
+  <line class="cls-2" x1="82.36" y1="493.35" x2="82.36" y2="535.35"/>
+</svg>
